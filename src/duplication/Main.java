@@ -18,7 +18,7 @@ public static List<String> lines;
 public static int primeNumLine;
 public static int secondNumLine;
     public static void main(String[] args) {
-        String text = "data/fr3r0_GL10_PVH.nc";
+        String text = "data/fr10r0_пс-4-40(S70)_Гл70_.nc";
         int i = 0;
 
         Scanner sc = new Scanner(System.in);
@@ -42,18 +42,19 @@ public static int secondNumLine;
             sc.close();
             lines = Files.readAllLines(Paths.get(text));
             List<String> partManufacturingCode = new ArrayList<>();
-            File file = new File("data/Example.nc");
+            //File file = new File("data/Example.nc");
+            File file = new File("data/" + lines.get(0) + ".nc");
             file.createNewFile();
             FileWriter writer = new FileWriter(file);
 
             List<String> startlines = new ArrayList<>();
             List<String> endlines = new ArrayList<>();
             List<String> finallines = new ArrayList<>();
-            for (int j = 0; j < primeNumLine + 1; j++) {
+            for (int j = 0; j < primeNumLine - 1; j++) {
                 startlines.add(lines.get(j));
                startlines.add("\n");
             }
-            for (int w = secondNumLine + 1; w < lines.size(); w++) {
+            for (int w = secondNumLine; w < lines.size() - 1; w++) {
                 endlines.add(lines.get(w));
                 endlines.add("\n");
             }
