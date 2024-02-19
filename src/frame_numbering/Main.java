@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Main {
     public static List<String> lines;
     public static void main(String[] args) {
-        String text = "data/fr10r0_пс-4-40(S70)_Гл70_.nc";
+        String text = "data/1001.nc";
 
         try {
             lines = Files.readAllLines(Paths.get(text));

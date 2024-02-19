@@ -43,7 +43,7 @@ public static int secondNumLine;
             lines = Files.readAllLines(Paths.get(text));
             List<String> partManufacturingCode = new ArrayList<>();
             //File file = new File("data/Example.nc");
-            File file = new File("data/" + lines.get(0) + ".nc");
+            File file = new File("data/" + lines.get(0).substring(2) + ".nc");
             file.createNewFile();
             FileWriter writer = new FileWriter(file);
 
@@ -54,7 +54,7 @@ public static int secondNumLine;
                 startlines.add(lines.get(j));
                startlines.add("\n");
             }
-            for (int w = secondNumLine; w < lines.size() - 1; w++) {
+            for (int w = secondNumLine; w < lines.size(); w++) {
                 endlines.add(lines.get(w));
                 endlines.add("\n");
             }
