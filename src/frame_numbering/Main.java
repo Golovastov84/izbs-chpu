@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Main {
     public static List<String> lines;
     public static void main(String[] args) {
-        String text = "data/1001.nc";
+        String text = "data/DB_min_step_clean_select.nc";
 
         try {
             lines = Files.readAllLines(Paths.get(text));
@@ -30,7 +30,7 @@ public class Main {
             for ( String line : lines
             ) {
                 line=line.replaceAll(regex,"N" + i);
-                i++;
+                i += 2;
                 finalLines.add(line);
                 finalLines.add("\n");
             }
