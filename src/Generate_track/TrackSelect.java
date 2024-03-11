@@ -21,7 +21,7 @@ public class TrackSelect {
                 String finallineStr = "";
                 int trackY = 1;
                 for (Float i = startX; i < finishX; i+=3) {
-                    if (i < -48f || (i > -10f && i < 18f) || i > 48f) {
+                    if (i < -48f || (i > -17f && i < 18f) || i > 48f) {
                         if (trackY > 0) {
                             finallineStr = finallineStr.concat(RotateY(i, startY, finishY));
                         } else {
