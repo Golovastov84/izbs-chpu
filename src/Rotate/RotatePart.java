@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 public class RotatePart {
     public static List<String> lines;
     public static void main(String[] args) {
-        String text = "data/DB_min_step_clean_select.nc";
+        String text = "data/fr3r0.nc";
         List<String> repXW = new ArrayList<>();
         List<String> repYX = new ArrayList<>();
         List<String> repWY = new ArrayList<>();
